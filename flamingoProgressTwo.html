@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+<h1>Flamingo progress bar</h1>
+
+<div id="myProgress">
+  <div class="myBar one"><img src="flamingoPro/flamingoPro001.jpg"></div>
+  <div class="myBar two"><img src="flamingoPro/flamingoPro002.jpg"></div>
+  <div class="myBar three"><img src="flamingoPro/flamingoPro003.jpg"></div>
+  <div class="myBar four"><img src="flamingoPro/flamingoPro004.jpg"></div>
+  <div class="myBar five"><img src="flamingoPro/flamingoPro005.jpg"></div>
+  
+</div>
+	<style>
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  /*background-color: #ddd;*/
+
+}
+
+.one {
+  /*position: absolute;*/
+  width: 20%;
+  height: 100%;
+ /* background-color: #4CAF50;*/
+  float:left;
+  visibility: hidden;
+}
+.one img{
+	width:100%;
+	height:auto;
+}
+.two {
+  /*position: absolute;*/
+  width: 20%;
+  height: 100%;
+  /*background-color: red;*/
+  float:left;
+  visibility: hidden;
+}
+.two img{
+	width:100%;
+	height:auto;
+}
+.three {
+ /* position: absolute;*/
+  width: 20%;
+  height: 100%;
+  /*background-color: blue;*/
+  float:left;
+  visibility: hidden;
+}
+.three img{
+	width:100%;
+	height:auto;
+}
+.four {
+  /*position: absolute;*/
+  width: 20%;
+  height: 100%;
+  /*background-color: orange;*/
+  float:left;
+  visibility: hidden;
+}
+.four img{
+	width:100%;
+	height:auto;
+}
+.five {
+  /*position: absolute;*/
+  width: 20%;
+  height: 100%;
+  /*background-color: yellow;*/
+  float:left;
+  visibility: hidden;
+}
+.five img{
+	width:100%;
+	height:auto;
+}
+.show{
+	visibility: visible; 
+	transition:visibility 1000ms;
+}
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+
+
+			function callIt(){
+				$(".one").addClass("show");
+			};
+			function callItTwo(){
+				$(".one").removeClass("show");
+				$(".two").addClass("show");
+			};
+			function callItThree(){
+				$(".two").removeClass("show");
+				$(".three").addClass("show");
+			};
+			function callItFour(){
+				$(".three").removeClass("show");
+				$(".four").addClass("show");
+			};
+			function callItFive(){
+				$(".four").removeClass("show");
+				$(".five").addClass("show");
+			};
+			function callItSix(){
+				$(".five").removeClass("show");
+			};
+	
+		setTimeout(function(){callIt()}, 1000);
+		setTimeout(function(){callItTwo()}, 2000);
+		setTimeout(function(){callItThree()}, 3000);
+		setTimeout(function(){callItFour()}, 4000);
+		setTimeout(function(){callItFive()}, 5000);
+		setTimeout(function(){callItSix()}, 6000);
+	</script>
+</body>
+</html>
